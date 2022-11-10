@@ -1,0 +1,3 @@
+/home/jonagurk/CLionProjects/Aufgabe_2/cmake-build-debug/CMakeFiles/Aufgabe_2.dir
+/home/jonagurk/CLionProjects/Aufgabe_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jonagurk/CLionProjects/Aufgabe_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
