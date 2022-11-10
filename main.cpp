@@ -36,9 +36,7 @@ AdjListNode berrechneMin (std::vector<AdjListNode> nodes,int startingNode) {
     returnNode.from=minNextNodeName;
     return returnNode;
 }
-
-int main() {
-    //Einlesen der Datei
+std::vector<AdjListNode> readFile(){
     std::ifstream file("/home/jonagurk/Dokumente/USA-road-d.NY.gr");
     std::vector<AdjListNode> nodes;
     AdjListNode node;
@@ -67,11 +65,11 @@ int main() {
         }
         file.close();
     }
-    //for ( const AdjListNode &e : nodes )
-    //{
-    //    std::cout << e.from <<" "<< e.dest <<" "<< e.weight << std::endl;
-    //}
+    return nodes;
+}
 
+int main() {
+    //Einlesen der Datei
     std::vector<double> minimumDistances; // Vektor für die kleinsten Abstände
     std::vector<int> previousVertices; // Vektor für die Vorgängerknoten
     std::vector<int>  vertexNo; // Vektor für die Namen
@@ -94,7 +92,8 @@ int main() {
     //for(unsigned i = 0; i < nodes.size(); i++) {
 
     //}
-
+    std::vector<AdjListNode> nodes;
+    nodes=readFile();
     int startingNode=11;
     AdjListNode returnNode;
     returnNode=berrechneMin(nodes,startingNode);
